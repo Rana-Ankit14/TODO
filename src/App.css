@@ -8,8 +8,8 @@ body{
   text-align: center;
 }
 
-div.list{
-  margin: 3px auto 0px auto;
+div.list, input{
+  margin: 3px auto 0 auto;
   padding: 5px;
   border: 1px solid black;
   width: 30%;
