@@ -4,16 +4,16 @@
   height: 100vh;
 }
 
-body{
-  text-align: center;
-}
 
 div.list, input{
-  margin: 3px auto 0 auto;
-  padding: 5px;
+  padding: 10px 15px 10px;
   border: 1px solid black;
   width: 30%;
   background: #ffffff;
   box-shadow: 5px 5px 5px darkgrey;
   border-radius: 3px;
+  height: 20px;
+}
+div.list button{
+  float: right;
 }
