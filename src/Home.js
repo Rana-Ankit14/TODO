@@ -29,6 +29,13 @@ export const Home = ()=>{
         newTodos[index].isCompleted = true;
         setTodos(newTodos);
     };
+
+    const deleteTodo = index =>{
+        const newTodos=[...todos];
+        newTodos.splice(index,1);
+        setTodos(newTodos);
+    };
+
     return(
         <div>
 
@@ -38,6 +45,7 @@ export const Home = ()=>{
                     index={index}
                     todo={todo}
                     completeTodo={completeTodo}
+                    deleteTodo={deleteTodo}
                 />
             ))}
             <TodoForm  addTodo={addTodo}/>

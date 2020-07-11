@@ -14,6 +14,7 @@ div.list, input{
   border-radius: 3px;
   height: 20px;
 }
-div.list button{
+div.list div div{
+  display: inline-block;
   float: right;
 }
