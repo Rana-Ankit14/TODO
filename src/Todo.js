@@ -1,10 +1,16 @@
 import React from "react";
 
-export const Todo = (props) =>{
-    return(
+export const Todo = ({todo, index, completeTodo,deleteTodo}) => {
+    return (
         <div className="list">
-            {props.todo.text}
-            {console.log(props.index)}
+            <div style={{textDecoration: todo.isCompleted ? 'line-through' : ''}}>
+                {todo.text}
+                <div>
+                    <button onClick={() => {completeTodo(index)}}>Completed</button>
+                    <button onClick={()=>{deleteTodo(index)}}>X</button>
+                </div>
+            </div>
+
         </div>
     )
 }

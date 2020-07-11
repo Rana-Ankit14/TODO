@@ -20,9 +20,21 @@ export const Home = ()=>{
     ])
 
     const addTodo = text =>{
+        console.log(text);
         const NewTodos = [...todos,{text}];
         setTodos(NewTodos);
     }
+    const completeTodo =(index) =>{
+        const newTodos = [...todos];
+        newTodos[index].isCompleted = true;
+        setTodos(newTodos);
+    };
+
+    const deleteTodo = index =>{
+        const newTodos=[...todos];
+        newTodos.splice(index,1);
+        setTodos(newTodos);
+    };
 
     return(
         <div>
@@ -32,6 +44,8 @@ export const Home = ()=>{
                     key={index}
                     index={index}
                     todo={todo}
+                    completeTodo={completeTodo}
+                    deleteTodo={deleteTodo}
                 />
             ))}
             <TodoForm  addTodo={addTodo}/>
